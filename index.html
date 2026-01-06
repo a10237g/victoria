@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victoria AI - Family Safety & Communication System</title>
+    <title>Victoria AI - Personal AI Companion & Threat Monitoring System</title>
     <style>
         * {
             margin: 0;
@@ -12,223 +13,198 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
         }
         
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
-        }
-        
-        header {
+        .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 40px 30px;
+            padding: 60px 20px;
             text-align: center;
         }
         
-        header h1 {
+        .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
         }
         
-        header p {
+        .header p {
             font-size: 1.2em;
-            opacity: 0.95;
+            opacity: 0.9;
         }
         
-        .content {
-            padding: 40px 30px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
         
-        h2 {
+        .section {
+            margin-bottom: 60px;
+        }
+        
+        .section h2 {
             color: #667eea;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.8em;
-        }
-        
-        h3 {
-            color: #764ba2;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 1.3em;
-        }
-        
-        p {
-            margin-bottom: 15px;
-            font-size: 1.1em;
-        }
-        
-        ul {
-            margin-left: 30px;
+            font-size: 2em;
             margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
         }
         
-        li {
-            margin-bottom: 10px;
-            font-size: 1.05em;
+        .section p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
         }
         
-        .phone-number {
-            background: #f7f7f7;
-            padding: 20px;
-            border-left: 4px solid #667eea;
-            margin: 30px 0;
-            border-radius: 4px;
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
         }
         
-        .phone-number strong {
-            color: #667eea;
-            font-size: 1.3em;
-        }
-        
-        .opt-in-box {
-            background: #e8f4f8;
-            border: 2px solid #667eea;
-            padding: 25px;
-            margin: 30px 0;
-            border-radius: 8px;
-        }
-        
-        .opt-in-box h3 {
-            margin-top: 0;
-            color: #667eea;
-        }
-        
-        footer {
-            background: #f7f7f7;
+        .feature-card {
+            background: #f8f9fa;
             padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .contact-box {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .contact-box h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .contact-info {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+        
+        .contact-info strong {
+            color: #667eea;
+        }
+        
+        .footer {
+            background: #2d3748;
+            color: white;
             text-align: center;
-            border-top: 1px solid #e0e0e0;
+            padding: 30px 20px;
+            margin-top: 60px;
         }
         
-        footer p {
-            margin: 5px 0;
-            color: #666;
-            font-size: 0.95em;
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
         }
         
-        .highlight {
-            background: #fff3cd;
-            padding: 2px 6px;
-            border-radius: 3px;
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <h1>Victoria AI</h1>
+        <p>Personal AI Companion & Threat Monitoring System</p>
+    </div>
+    
     <div class="container">
-        <header>
-            <h1>Victoria AI</h1>
-            <p>Personal AI Family Safety & Communication System</p>
-        </header>
-        
-        <div class="content">
-            <h2>About Victoria</h2>
-            <p>
-                Victoria is a personal AI assistant developed by Matt Arnold for family safety monitoring 
-                and communication. Victoria provides the Arnold family with intelligent threat monitoring, 
-                location tracking, and 24/7 communication capabilities through SMS and voice.
-            </p>
-            
-            <h2>What Victoria Does</h2>
-            <ul>
-                <li><strong>Family Safety Monitoring:</strong> Scans 250+ news sources for global threats, disease outbreaks, and safety alerts</li>
-                <li><strong>SMS Communication:</strong> Authorized family members can communicate with Victoria for information, assistance, and safety updates</li>
-                <li><strong>Location Tracking:</strong> Monitors family location for safety purposes with consent</li>
-                <li><strong>Emergency Alerts:</strong> Sends immediate SMS notifications for high-severity threats</li>
-                <li><strong>Daily Reports:</strong> Provides daily safety summaries via email and SMS</li>
-            </ul>
-            
-            <h2>Who Uses Victoria</h2>
-            <p>
-                Victoria is used exclusively by the Arnold family for personal safety and communication purposes. 
-                This is not a commercial service. The system is operated by Matt Arnold for his immediate family members.
-            </p>
-            
-            <div class="opt-in-box">
-                <h3>📲 SMS Messaging - Authorized Family Members Only</h3>
-                <p>
-                    Victoria sends SMS messages only to authorized family members who have been 
-                    explicitly added to the system by the system operator.
-                </p>
-                
-                <h4>How Family Members Are Authorized:</h4>
-                <ol>
-                    <li>Family member contacts the system operator directly</li>
-                    <li>System operator adds their phone number to Victoria's authorized list</li>
-                    <li>Family member receives a confirmation message from Victoria</li>
-                    <li>Victoria will then send safety alerts and respond to messages from that number</li>
-                </ol>
-                
-                <h4>Sample Messages Authorized Recipients May Receive:</h4>
-                <ul>
-                    <li>"Hello! This is Victoria. You've been added to the family safety system. Reply STOP to unsubscribe."</li>
-                    <li>"⚠️ ALERT: Severe weather warning in your area. Take appropriate safety precautions."</li>
-                    <li>"📍 Daily Safety Summary: No major threats detected in your region today."</li>
-                </ul>
-                
-                <h4>To Stop Receiving Messages:</h4>
-                <p>
-                    Reply <span class="highlight">STOP</span> to any message from Victoria at any time. 
-                    You will immediately be removed from the messaging list.
-                </p>
-                
-                <h4>For Authorization or Help:</h4>
-                <p>
-                    This is a private family safety system. To request authorization to receive messages, 
-                    contact <strong>victoria.e.arnold@protonmail.com</strong>
-                </p>
-            </div>
-            
-            <h2>Privacy & Data</h2>
-            <p>
-                All data collected by Victoria is stored securely and used only for family safety purposes. 
-                Victoria does not share, sell, or distribute any personal information to third parties. 
-                Location data and communication logs are encrypted and accessible only to authorized family members.
-            </p>
-            
-            <h2>Terms of Service</h2>
-            <p>
-                By texting Victoria, you agree to:
-            </p>
-            <ul>
-                <li>Receive SMS messages for safety alerts and communication</li>
-                <li>Standard messaging rates may apply from your carrier</li>
-                <li>You can opt-out at any time by replying STOP</li>
-                <li>Messages are sent for family safety purposes only, not marketing</li>
-            </ul>
-            
-            <h2>Contact Information</h2>
-            <p>
-                <strong>System Operator:</strong> Matt Arnold<br>
-                <strong>Email:</strong> victoria.e.arnold@protonmail.com<br>
-                <strong>Location:</strong> Pingree Grove, Illinois, United States
-            </p>
-            
-            <p style="font-size: 0.95em; color: #666; margin-top: 15px;">
-                <em>Note: This is a private family safety system. Inquiries are reviewed manually. 
-                Authorization for SMS messaging is granted only to immediate family members.</em>
-            </p>
+        <div class="section">
+            <h2>About Victoria AI</h2>
+            <p>Victoria AI is an advanced personal AI companion and threat monitoring system designed to enhance personal safety and provide intelligent assistance. Our system combines real-time threat detection, location tracking, and conversational AI to create a comprehensive personal security and assistance solution.</p>
+            <p>Victoria monitors news sources, weather conditions, and potential threats 24/7, providing timely alerts and intelligent responses to keep you informed and safe.</p>
         </div>
         
-        <footer>
-            <p><strong>Victoria AI Family Safety System</strong></p>
-            <p>Personal communication system operated by Matt Arnold</p>
-            <p>Pingree Grove, Illinois, United States</p>
-            <p style="margin-top: 20px; font-size: 0.85em;">
-                This is a personal family safety system, not a commercial service.
-            </p>
-        </footer>
+        <div class="section">
+            <h2>Services</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>🛡️ Threat Monitoring</h3>
+                    <p>24/7 monitoring of news sources, weather alerts, and potential security threats relevant to your location.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>📱 SMS Notifications</h3>
+                    <p>Real-time SMS alerts for critical threats, severe weather, and important updates requiring immediate attention.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>💬 AI Conversation</h3>
+                    <p>Engage in natural conversations with Victoria through voice, text, or web interface for assistance and information.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>📍 Location Awareness</h3>
+                    <p>GPS tracking integration for location-aware threat detection and personalized safety monitoring.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>📧 Email Integration</h3>
+                    <p>Automatic email monitoring and intelligent responses for important communications.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🧠 Memory System</h3>
+                    <p>Persistent memory that learns your preferences, remembers important information, and personalizes responses.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>SMS Alert Opt-In Process</h2>
+            <p>Victoria AI provides SMS alert services to authorized users. Here's how the opt-in process works:</p>
+            <ol style="margin-left: 30px; margin-top: 20px; font-size: 1.1em;">
+                <li style="margin-bottom: 10px;"><strong>Contact Us:</strong> Send an email to victoria.e.arnold@protonmail.com expressing your interest in receiving SMS alerts.</li>
+                <li style="margin-bottom: 10px;"><strong>Authorization:</strong> Provide your phone number and confirm your consent to receive SMS notifications from Victoria AI.</li>
+                <li style="margin-bottom: 10px;"><strong>Configuration:</strong> We will configure your account to receive alerts based on your preferences and location.</li>
+                <li style="margin-bottom: 10px;"><strong>Confirmation:</strong> You will receive a confirmation SMS once your account is activated.</li>
+                <li style="margin-bottom: 10px;"><strong>Opt-Out:</strong> Reply STOP to any message to immediately unsubscribe from SMS alerts.</li>
+            </ol>
+            <p style="margin-top: 20px;"><strong>Sample Messages:</strong></p>
+            <ul style="margin-left: 30px; margin-top: 10px; font-size: 1.1em;">
+                <li style="margin-bottom: 10px;">"🚨 CRITICAL: Severe thunderstorm warning for your area. Seek shelter immediately."</li>
+                <li style="margin-bottom: 10px;">"⚠️ ALERT: Security threat detected near Pingree Grove, IL. Stay vigilant."</li>
+                <li style="margin-bottom: 10px;">"📍 INFO: Your location has been updated. Current battery: 85%."</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Contact Information</h2>
+            <div class="contact-box">
+                <h3>Get in Touch</h3>
+                <div class="contact-info">
+                    <p><strong>Business Name:</strong> Victoria AI</p>
+                    <p><strong>Operator:</strong> Matt Arnold</p>
+                    <p><strong>Address:</strong> 1239 Driftwood Ln, Pingree Grove, IL 60140</p>
+                    <p><strong>Phone:</strong> (815) 893-7311</p>
+                    <p><strong>Email:</strong> victoria.e.arnold@protonmail.com</p>
+                    <p style="margin-top: 20px;">For inquiries about SMS alert services, privacy concerns, or general questions, please contact us via email. We typically respond within 24-48 hours.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2026 Victoria AI. All rights reserved.</p>
+        <p style="margin-top: 10px;">
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Service</a>
+        </p>
     </div>
 </body>
 </html>
